@@ -34,6 +34,12 @@ List * createList() {
 }
 
 void * firstList(List * list) {
+    if (list == NULL) {
+        return NULL;
+    }
+  else{
+    list->current = list->head;
+  }
     return NULL;
 }
 
