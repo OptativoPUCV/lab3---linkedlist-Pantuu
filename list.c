@@ -34,13 +34,14 @@ List * createList() {
 }
 
 void * firstList(List * list) {
-    if (list == NULL) {
+    if (list == NULL || list->head == NULL) {
         return NULL;
     }
-  else{
+    void *data = list->head->data;
     list->current = list->head;
-  }
-    return (void *)list->current->data;
+  
+  
+      return data; 
 }
 
 void * nextList(List * list) {
